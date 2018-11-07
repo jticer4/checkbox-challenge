@@ -41,3 +41,13 @@ p {
 	font-weight: 200;
 	border-left: 1px solid #D1E2FF;
 }
+#title1, #title2 {
+	text-align: center;
+}
+#title1 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+#title2{
+	margin-top: 0;
+}
