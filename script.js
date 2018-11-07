@@ -5,7 +5,7 @@ let lastChecked;
 
 //control the checkbox functionality
 function handleCheck(e) {
-
+	//marks the checkboxes in between the last checked and checked boxes
 	let inBetween = false;
 
 	//check to see if the shift key is held down and the box is being checked and not unchecked
@@ -14,9 +14,15 @@ function handleCheck(e) {
 		//loop over all checkboxes
 		checkboxes.forEach(checkbox =>{
 			console.log(checkbox);
+			//select all checkboxes between the last checked and checked boxes
 			if (checkbox === this || checkbox === lastChecked) {
 				inBetween = !inBetween;
 				console.log("starting to check them inbetween")
+			}
+
+			//if inBetween is true then its between the last checked and checked boxes, so checked is set to true
+			if(inBetween){
+				checkbox.checked = true;
 			}
 		});
 	}
