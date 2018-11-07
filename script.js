@@ -14,6 +14,10 @@ function handleCheck(e) {
 		//loop over all checkboxes
 		checkboxes.forEach(checkbox =>{
 			console.log(checkbox);
+			if (checkbox === this || checkbox === lastChecked) {
+				inBetween = !inBetween;
+				console.log("starting to check them inbetween")
+			}
 		});
 	}
 	lastChecked = this;
